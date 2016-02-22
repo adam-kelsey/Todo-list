@@ -40,9 +40,6 @@ window.TodoIndex = React.createClass
     todos: []
 
   componentWillMount: ->
-    @setState(todos: @props.todos)
-
-  componentWillMount: ->
     TodoStore.listen(@onChange)
     TodoActions.initData(@props)
 
